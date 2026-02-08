@@ -54,7 +54,7 @@ void listarEmprestimosPorUsuario(Emprestimo emprestimos[], int qtdEmprestimos,
     printf("Digite o ID do usuário: ");
     scanf("%d", &id);
 
-    printf("\n📚 Livros emprestados:\n");
+    printf("\n Livros emprestados:\n");
     for (int i = 0; i < qtdEmprestimos; i++) {
         if (emprestimos[i].idUsuario == id) {
             for (int j = 0; j < qtdLivros; j++) {
