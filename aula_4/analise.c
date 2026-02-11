@@ -17,7 +17,7 @@ int buscaBinaria(int v[], int n, int x)
 }
 
 
-
+//O(log n) - Tempo logarítmico
 int contarDivisoes(int n)
 {
     int cont = 0;
@@ -29,6 +29,8 @@ int contarDivisoes(int n)
     return cont;
 }
 
+
+//O(1) - Tempo constante
 void atribuirValor(int *x)
 {
     *x = 10;
@@ -77,6 +79,8 @@ int primeiroElemento(int v[])
     return v[0];
 }
 
+
+//O(n log n) - Tempo Linearítmico
 void ordenar(int v[], int n)
 {
     for (int passo = n; passo > 1; passo /= 2)
@@ -88,6 +92,8 @@ void ordenar(int v[], int n)
     }
 }
 
+
+//O(n) - Tempo linear
 void imprimirMatriz(int m[][3], int linhas)
 {
     for (int i = 0; i < linhas; i++)
@@ -127,6 +133,7 @@ int fibonacci(int n)
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+//O(2ⁿ) - Tempo exponencial
 void gerarSubconjuntos(int n)
 {
     if (n == 0)
