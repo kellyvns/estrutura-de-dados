@@ -1,42 +1,36 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>  
 
-int main() {
-    int tamanho;
+int main () {
 
-    printf("Digite o tamanho do vetor: ");
-    scanf("%d", &tamanho);
+int valor;
+int indice;
 
-    if (tamanho <= 0) {
-        printf("Tamanho inválido! O vetor deve ter pelo menos 1 posição.\n");
-        return 1;
-    }
+    int tamVetor; 
+    printf("Informe o tamanho do vetor: ");
+    scanf(" %d", &tamVetor);
 
-    int *vetor = (int*) malloc(tamanho * sizeof(int));
+    if (tamVetor <= 0) { 
+        printf("Tamanho invalido!");
+        return 1; 
+    } 
 
-    if (vetor == NULL) {
-        printf("Erro ao alocar memória.\n");
-        return 1;
-    }
+    int numeros[tamVetor]; 
 
-    printf("Digite os %d valores inteiros:\n", tamanho);
-    for (int i = 0; i < tamanho; i++) {
-        printf("Posição %d: ", i);
-        scanf("%d", &vetor[i]);
-    }
+        for (int i = 0; i < tamVetor; i++){ 
+            printf("Informe o Valor da posicao [%d]: ", i);
+            scanf(" %d", &valor);
+            numeros[i] = (valor);
+        }
 
-    int indice;
+        printf("Informe o indice ");
+        scanf(" %d", &indice);
 
-    printf("Digite o índice que deseja consultar: ");
-    scanf("%d", &indice);
+            if (indice >= 0 && indice < tamVetor){ 
+                printf("O valor na posicao %d e %d", indice, numeros[indice]); 
+            } else {
+                printf("Indice invalido! Digite um valor entre 0 e %d", tamVetor);
+}
 
-    if (indice < 0 || indice >= tamanho) {
-        printf("Índice inválido! Informe um valor entre 0 e %d.\n", tamanho - 1);
-    } else {
-        printf("Valor armazenado na posição %d: %d\n", indice, vetor[indice]);
-    }
+return 0; 
 
-    free(vetor);
-
-    return 0;
 }
